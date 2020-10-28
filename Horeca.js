@@ -1,51 +1,73 @@
-function KeuzeDrankje(){
-    document.write('<br>Drankje:'+ prompt('Welke bestelling wilt u toevoegen? Keuze uit fris, wijn of bier'));
-}
-KeuzeDrankje();
+const PrijsFris = 1;
+const PrijsWijn = 2;
+const PrijsBier = 2;
+
+var BetaaldFris = drankje * PrijsFris;
+var BetaaldWijn = drankje * PrijsWijn;
+var BetaaldBier = drankje * PrijsBier;
+
+var drankje;
+var hoeveelheid;
+
+var bitterballen;
+var aantal;
+
+const Prijs6 = 3;
+const Prijs18 = 4;
+
+var Betaald6 = bitterballen * Prijs6;
+var Betaald18 = bitterballen * Prijs18;
+
+var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier;
 
 
-function Fris(){
-    document.write('<br>Aantal: ' + prompt('Hoeveel fris wilt u toevoegen aan uw bestelling?'));
-}
-Fris();
+//Drankjes
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*var antwoord;
-
-antwoord=prompt('Welke bestelling wilt u toevoegen? Keuze uit fris, wijn of bier');
-
-if(antwoord=="fris"){
-    document.write("Keuze: fris");
-    document.write('<br>Aantal fris: ' + prompt('Hoeveel fris wilt u toevoegen aan uw bestelling?'));
-}
-
-    if(antwoord=="wijn"){
-    document.write("Keuze: wijn");
-    document.write('<br>Aantal wijn: ' + prompt('Hoeveel wijn wilt u toevoegen aan uw bestelling?'));
+while(drankje != "stop"){
+    drankje = prompt("Wat wilt u bestellen? keuze uit fris, wijn, of bier.");
+    if (drankje != "stop")
+    {
+        hoeveelheid = parseInt(prompt("Hoeveel " + drankje + " wilt u bestellen?"));
+        Bestelling (drankje, hoeveelheid);
     }
 
-        if(antwoord=="bier"){
-             document.write("Keuze: bier");
-             document.write('<br>Aantal bier: ' + prompt('Hoeveel bier wilt u toevoegen aan uw bestelling?'));
-        }*/
+}
+
+function Bestelling(drankje, hoeveelheid){
+    document.write("Bestelling: " + drankje + "<br>Aantal:" + hoeveelheid + "<br>");
+}
+
+
+//Prijs drankjes
+document.write('<br> Prijs fris: €' + BetaaldFris);
+document.write('<br> Prijs wijn: €' + BetaaldWijn);
+document.write('<br> Prijs bier: €' + BetaaldBier);
+
+document.write("<br>");
+document.write("<br>");
+
+
+//Bitterballen
+while(bitterballen != "stop"){
+    bitterballen = prompt("Wat wilt u bestellen? keuze uit bitterballen.");
+    if (bitterballen != "stop")
+    {
+        aantal = parseInt(prompt("Wat voor schaal " + bitterballen + " wilt u bestellen? (schaal 6 of 18)"));
+        aantal = parseInt(prompt("Hoeveel schaalen " + bitterballen + " wilt u bestellen?"));
+        Bestelling (bitterballen, aantal);
+    }
+
+}
+
+function Bestelling(bitterballen, aantal){
+    document.write("Bestelling: " + bitterballen + "<br>Aantal:" + aantal + "<br>");
+}
+
+
+//Prijs bitterballen
+document.write('<br> Prijs schaal van 6 bitterballen: €' + Betaald6);
+document.write('<br> Prijs schaal van 18 bitterballen: €' + Betaald18);
+
+
+//Berekening totaalbedrag
+document.write('<br> Totaalbedrag: €' + Totaalbedrag );

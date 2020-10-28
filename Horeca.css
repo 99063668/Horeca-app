@@ -1,0 +1,36 @@
+.topnav {
+    overflow: hidden;
+    background-color: black;
+  }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: rgb(23, 24, 23);
+    color: white;
+  }
+  .topnav a.active {
+    background-color: rgb(17, 102, 182);
+    color: white;
+  }
+
+
+img  {
+    width: 275px;
+    height: 184px;
+    float: center;
+}
+img.drankje  {
+    width: 208px;
+    height: 243px;
+    float: center;
+}
+
+div.container{
+    margin: 0 auto;
+}
