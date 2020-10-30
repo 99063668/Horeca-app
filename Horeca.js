@@ -4,14 +4,14 @@ function Clickme1() {
     var totaal1 = 0;
     var radio1 = 1;
 
-    if (document.getElementById("fris").checked) {
-      radio1 = 1.00;
-      document.getElementById("radio1")
-    } else if (document.getElementById("wijn").checked) {
+    if (document.getElementById("cola").checked) {
       radio1 = 1.25;
       document.getElementById("radio1")
-    } else if (document.getElementById("bier").checked) {
-      radio1 = 1.75;
+    } else if (document.getElementById("fanta").checked) {
+      radio1 = 1.25;
+      document.getElementById("radio1")
+    } else if (document.getElementById("sprite").checked) {
+      radio1 = 1.25;
       document.getElementById("radio1")
     }
 
@@ -20,6 +20,51 @@ function Clickme1() {
     totaalbedrag += totaal1;
     document.getElementById("totaalbedrag").value = totaalbedrag;
   }
+
+  function Clickme3() {
+    var aantal3 = parseInt(document.getElementById("aantal4").value);
+    var totaal3 = 0;
+    var radio3 = 1;
+
+    if (document.getElementById("rode wijn").checked) {
+      radio3 = 1.50;
+      document.getElementById("radio3")
+    } else if (document.getElementById("witte wijn").checked) {
+      radio3 = 1.50;
+      document.getElementById("radio3")
+    } else if (document.getElementById("rose wijn").checked) {
+      radio3 = 1.25;
+      document.getElementById("radio3")
+    }
+
+    totaal3 = radio3 * aantal3;
+    document.getElementById("totaal3").value = totaal3;
+    totaalbedrag += totaal3;
+    document.getElementById("totaalbedrag").value = totaalbedrag;
+  }
+  
+  function Clickme4() {
+    var aantal4 = parseInt(document.getElementById("aantal4").value);
+    var totaal4 = 0;
+    var radio4 = 1;
+
+    if (document.getElementById("blond bier").checked) {
+      radio4 = 1.75;
+      document.getElementById("radio4")
+    } else if (document.getElementById("bok bier").checked) {
+      radio4 = 1.75;
+      document.getElementById("radio4")
+    } else if (document.getElementById("alcoholvrij bier").checked) {
+      radio4 = 1.25;
+      document.getElementById("radio4")
+    }
+
+    totaal4 = radio4 * aantal4;
+    document.getElementById("totaal4").value = totaal4;
+    totaalbedrag += totaal4;
+    document.getElementById("totaalbedrag").value = totaalbedrag;
+  }
+  
 
 function Clickme2() {
   var aantal2 = parseInt(document.getElementById("aantal2").value);
@@ -32,7 +77,15 @@ function Clickme2() {
   } else if (document.getElementById("bitterballen18").checked) {
     radio2 = 2.25;
     document.getElementById("radio2")
-
+  } else if (document.getElementById("kipnuggets").checked) {
+    radio2 = 1.75;
+    document.getElementById("radio2")
+  } else if (document.getElementById("kroket").checked) {
+    radio2 = 2.50;
+    document.getElementById("radio2")
+  } else if (document.getElementById("kaassouffle").checked) {
+    radio2 = 2.00;
+    document.getElementById("radio2")
 
   totaal2 = radio2 * aantal2;
   document.getElementById("totaal2").value = totaal2;
@@ -40,63 +93,6 @@ function Clickme2() {
   document.getElementById("totaalbedrag").value = totaalbedrag;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function runTotal() {
-    var total = 0;
-    var Fris = 1.0;
-    var Wijn = 1.50;
-    var Bier = 1.75;
-    var bitterballen6 = 2.0;
-    var bitterballen18 = 2.25;
-    if(document.forms[0].drankjes[0].checked == true) {
-        total += Fris;
-    }
-    else if(document.forms[0].drankjes[1].checked == true){
-        total += Wijn;
-    }
-    else if(document.forms[0].drankjes[2].checked == true){
-        total += Bier;
-    }
-    else if(document.forms[0].snacks[2].checked == true){
-        total += bitterballen6;
-    }
-    
-    for(var i = 0; i < 2; i++){
-        if(document.forms[0].snacks[i].checked == true){
-            total += bitterballen18;
-		}
-    }
-    document.f1.Total.value = total;
-} /*
-
-
-
-
-
 
 
 
