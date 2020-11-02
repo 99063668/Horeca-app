@@ -1,26 +1,10 @@
-var Fris = prompt('Hoeveel Fris?');
+/*var Fris = prompt('Hoeveel Fris?');
 var Wijn = prompt('Hoeveel Wijn?');
 var Bier = prompt('Hoeveel Bier?');
 var Bitterballen6 = prompt('Hoeveel schaalen van 6 bitterballen?');
 var Bitterballen18 = prompt('Hoeveel schaalen van 18 bitterballen?');
 
-/*while(drankje != "stop"){
-    drankje = prompt("Wat wilt u bestellen? keuze uit fris, wijn, of bier.");
-    if (drankje != "stop")
-    {
-        hoeveelheid = parseInt(prompt("Hoeveel " + drankje + " wilt u bestellen?"));
-        Bestelling (drankje, hoeveelheid);
-    }
-    else{
-        alert("Ongeldige bestelling. Probeer het opnieuw.");
-    }
-}
-
-function Bestelling(drankje, hoeveelheid){
-    document.write("Bestelling: " + drankje + "<br>Aantal:" + hoeveelheid + "<br>");
-}*/
-
-//Vraagt hoeveel 
+//Zegt hoeveel 
 document.write('<br>Fris : ' + Fris);
 document.write('<br>Wijn : ' + Wijn);
 document.write('<br>Bier : ' + Bier);
@@ -41,7 +25,7 @@ var Betaaldbitter6 = Bitterballen6 * Pricebitter6;
 var Betaaldbitter18 = Bitterballen18 * Pricebitter18;
 
 
-//Berekening 
+//Berekeningen
 document.write('<br>  Fris: €' + BetaaldFris);
 document.write('<br>  Wijn: €' + BetaaldWijn);
 document.write('<br>  Bier: €' + BetaaldBier);
@@ -51,7 +35,7 @@ document.write('<br>  schaal met 18 bitterballen: €' + Betaaldbitter18 + "<br>
 //Berekening totaalbedrag
 var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier + Betaaldbitter6 + Betaaldbitter18;
 
-document.write('<br> Totaalbedrag: €' + Totaalbedrag);
+document.write('<br> Totaalbedrag: €' + Totaalbedrag);*/
 
 
 
@@ -63,32 +47,12 @@ document.write('<br> Totaalbedrag: €' + Totaalbedrag);
 
 
 
-
-/*const PrijsFris = 1;
-const PrijsWijn = 2;
-const PrijsBier = 2;
-
-var BetaaldFris = drankje * PrijsFris;
-var BetaaldWijn = drankje * PrijsWijn;
-var BetaaldBier = drankje * PrijsBier;
 
 var drankje;
 var hoeveelheid;
-
-var bitterballen;
 var aantal;
 
-const Prijs6 = 3;
-const Prijs18 = 4;
-
-var Betaald6 = bitterballen * Prijs6;
-var Betaald18 = bitterballen * Prijs18;
-
-var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier;
-
-
 //Drankjes
-
 while(drankje != "stop"){
     drankje = prompt("Wat wilt u bestellen? keuze uit fris, wijn, of bier.");
     if (drankje != "stop")
@@ -96,24 +60,31 @@ while(drankje != "stop"){
         hoeveelheid = parseInt(prompt("Hoeveel " + drankje + " wilt u bestellen?"));
         Bestelling (drankje, hoeveelheid);
     }
-
 }
-
 function Bestelling(drankje, hoeveelheid){
     document.write("Bestelling: " + drankje + "<br>Aantal:" + hoeveelheid + "<br>");
 }
 
-
 //Prijs drankjes
-document.write('<br> Prijs fris: €' + BetaaldFris);
-document.write('<br> Prijs wijn: €' + BetaaldWijn);
-document.write('<br> Prijs bier: €' + BetaaldBier);
+const PriceFris = 1.25;
+const PriceWijn = 1.50;
+const PriceBier = 1.50;
 
-document.write("<br>");
-document.write("<br>");
+var BetaaldFris = hoeveelheid * PriceFris;
+var BetaaldWijn = hoeveelheid * PriceWijn;
+var BetaaldBier = hoeveelheid * PriceBier;
+
+document.write('<br>  Fris: €' + BetaaldFris);
+document.write('<br>  Wijn: €' + BetaaldWijn);
+document.write('<br>  Bier: €' + BetaaldBier);
+
+//Berekening totaalbedrag
+var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier;
+
+document.write('<br> Totaalbedrag: €' + Totaalbedrag);
 
 
-//Bitterballen
+/*//Bitterballen
 while(bitterballen != "stop"){
     bitterballen = prompt("Wat wilt u bestellen? keuze uit bitterballen.");
     if (bitterballen != "stop")
@@ -129,15 +100,17 @@ function Bestelling(bitterballen, aantal){
     document.write("Bestelling: " + bitterballen + "<br>Aantal:" + aantal + "<br>");
 }
 
+const Pricebitter6 = 2.0;
+const Pricebitter18 = 2.25;
 
-//Prijs bitterballen
-document.write('<br> Prijs schaal van 6 bitterballen: €' + Betaald6);
-document.write('<br> Prijs schaal van 18 bitterballen: €' + Betaald18);
+var Betaaldbitter6 = hoeveelheid * Pricebitter6;
+var Betaaldbitter18 = hoeveelheid* Pricebitter18;
+
+document.write('<br>  schaal met 6 bitterballen: €' + Betaaldbitter6);
+document.write('<br>  schaal met 18 bitterballen: €' + Betaaldbitter18);*/
 
 
-//Rekening
-function Rekening(drankjes, bitterballen, aantal)
 
 
-//Berekening totaalbedrag
-document.write('<br> Totaalbedrag: €' + Totaalbedrag );*/
+
+
