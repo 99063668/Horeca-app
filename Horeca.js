@@ -1,5 +1,4 @@
 var drankje;
-var aantal;
 
 //Drankjes
 while(drankje != "stop"){
@@ -19,17 +18,17 @@ const PriceFris = 1.25;
 const PriceWijn = 1.50;
 const PriceBier = 1.50;
 
-var aantalfris = aantal;
-var aantalwijn = aantal;
-var aantalbier = aantal;
+var AantalFris;
+var AantalWijn;
+var AantalBier;
 
-var BetaaldFris = aantalfris * PriceFris;
-var BetaaldWijn = aantalwijn * PriceWijn;
-var BetaaldBier = aantalbier * PriceBier;
+var BetaaldFris = AantalFris * PriceFris;
+var BetaaldWijn = AantalWijn * PriceWijn;
+var BetaaldBier = AantalBier * PriceBier;
 
-document.write("<br>" + aantalfris +  " Fris: €" + BetaaldFris);
-document.write("<br>" + aantalwijn +  " Wijn: €" + BetaaldWijn);
-document.write("<br>" + aantalbier + " Bier: €" + BetaaldBier);
+document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
+document.write("<br>" + AantalWijn +  " Wijn: €" + BetaaldWijn);
+document.write("<br>" + AantalBier + " Bier: €" + BetaaldBier);
 
 //Berekening totaalbedrag
 var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier;
