@@ -7,7 +7,7 @@ const PriceBier = 1.50;
 const PriceBitter6 = 2;
 const PriceBitter18 = 2.25;
 
-//Aantal 1 product
+//Aantal 
 var AantalFris = 0;
 var AantalWijn = 0;
 var AantalBier = 0;
@@ -17,7 +17,7 @@ var AantalBitter18 = 0;
 
 //Invoer
 while(invoer != "stop"){
-    invoer = prompt("Wat wilt u bestellen? keuze uit fris, wijn, en bier.").toLowerCase();
+    invoer = prompt("Wat wilt u bestellen?").toLowerCase();
 
     if (invoer == "fris")
     {
@@ -50,14 +50,14 @@ while(invoer != "stop"){
     }
 }
 
-//Totaal bedrag 1 product
+//Totaalbedrag product
 var BetaaldFris = AantalFris * PriceFris;
 var BetaaldWijn = AantalWijn * PriceWijn;
 var BetaaldBier = AantalBier * PriceBier;
 var BetaaldBitter6 = AantalBitter6 * PriceBitter6;
 var BetaaldBitter18 = AantalBitter18 * PriceBitter18;
 
-//Prijs drankjes
+//Bestelling weergeven
 document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
 document.write("<br>" + AantalWijn +  " Wijn: €" + BetaaldWijn);
 document.write("<br>" + AantalBier + " Bier: €" + BetaaldBier);
@@ -69,53 +69,7 @@ var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier + BetaaldBitter6 + Be
 
 document.write('<br> Totaalbedrag: €' + Totaalbedrag);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*//Bitterballen
-while(bitterballen != "stop"){
-    bitterballen = prompt("Wat wilt u bestellen? keuze uit bitterballen.");
-    if (bitterballen != "stop")
-    {
-        aantal = parseInt(prompt("Wat voor schaal " + bitterballen + " wilt u bestellen? (schaal 6 of 18)"));
-        aantal = parseInt(prompt("Hoeveel schaalen " + bitterballen + " wilt u bestellen?"));
-        Bestelling (bitterballen, aantal);
-    }
+//Rekening
+function Rekening(){
 
 }
-
-function Bestelling(bitterballen, aantal){
-    document.write("Bestelling: " + bitterballen + "<br>Aantal:" + aantal + "<br>");
-}
-
-const Pricebitter6 = 2.0;
-const Pricebitter18 = 2.25;
-
-var Betaaldbitter6 = hoeveelheid * Pricebitter6;
-var Betaaldbitter18 = hoeveelheid* Pricebitter18;
-
-document.write('<br>  schaal met 6 bitterballen: €' + Betaaldbitter6);
-document.write('<br>  schaal met 18 bitterballen: €' + Betaaldbitter18);*/
-
-
-
-
-
-
