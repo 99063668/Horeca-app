@@ -1,31 +1,43 @@
-var drankje;
+var invoer = null;
 
-//Drankjes
-while(drankje != "stop"){
-    drankje = prompt("Wat wilt u bestellen? keuze uit fris, wijn, of bier.");
-    if (drankje != "stop")
-    {
-        aantal = parseInt(prompt("Hoeveel " + drankje + " wilt u bestellen?"));
-        Bestelling (drankje, aantal);
-    }
-}
-function Bestelling(drankje, aantal){
-    document.write("Bestelling: " + aantal + " " + drankje + "<br>");
-}
-
-//Prijs drankjes
+//Prijzen
 const PriceFris = 1.25;
 const PriceWijn = 1.50;
 const PriceBier = 1.50;
 
-var AantalFris;
-var AantalWijn;
-var AantalBier;
+//Aantal 1 product
+var AantalFris = 0;
+var AantalWijn = 0;
+var AantalBier = 0;
 
+
+//Invoer
+while(invoer != "stop"){
+    invoer = prompt("Wat wilt u bestellen? keuze uit fris, wijn, en bier.").toLowerCase();
+
+    if (invoer == "fris")
+    {
+        invoer = parseInt(prompt("Hoeveel fris wilt u bestellen?"));
+        AantalFris = AantalFris + invoer;
+    }
+    if (invoer == "wijn")
+    {
+        invoer = parseInt(prompt("Hoeveel wijn wilt u bestellen?"));
+        AantalWijn = AantalWijn + invoer;
+    }
+    if (invoer == "bier")
+    {
+        invoer = parseInt(prompt("Hoeveel bier wilt u bestellen?"));
+        AantalBier = AantalBier + invoer;
+    }
+}
+
+//Totaal bedrag 1 product
 var BetaaldFris = AantalFris * PriceFris;
 var BetaaldWijn = AantalWijn * PriceWijn;
 var BetaaldBier = AantalBier * PriceBier;
 
+//Prijs drankjes
 document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
 document.write("<br>" + AantalWijn +  " Wijn: €" + BetaaldWijn);
 document.write("<br>" + AantalBier + " Bier: €" + BetaaldBier);
