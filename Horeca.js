@@ -69,7 +69,7 @@ var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier + BetaaldBitter6 + Be
 
 document.write('<br> Totaalbedrag: €' + Totaalbedrag);
 
-//Rekening
-function Rekening(){
+//Kassabon
+function Kassabon(){
 
 }
