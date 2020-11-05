@@ -1,4 +1,4 @@
-var invoer = null;
+var invoer = "";
 
 //Prijzen
 const PriceFris = 1.25;
@@ -14,84 +14,120 @@ var AantalBier = 0;
 var AantalBitter6 = 0;
 var AantalBitter18 = 0;
 
+//Betaald
+var BetaaldFris = 0;
+var BetaaldWijn = 0;
+var BetaaldBier = 0;
+var BetaaldBitter6 = 0;
+var BetaaldBitter18 = 0;
 
-//Invoer
-while(invoer != "stop"){
-    invoer = prompt("Wat wilt u bestellen?").toLowerCase();
+//Rekening tekst
+var lijn_tekst = "---------------------------------------------------------------";
 
-    if (invoer == "fris")
-    {
-        invoer = parseInt(prompt("Hoeveel fris wilt u bestellen?"));
-        AantalFris = AantalFris + invoer;
-    }
-    if (invoer == "wijn")
-    {
-        invoer = parseInt(prompt("Hoeveel wijn wilt u bestellen?"));
-        AantalWijn = AantalWijn + invoer;
-    }
-    if (invoer == "bier")
-    {
-        invoer = parseInt(prompt("Hoeveel bier wilt u bestellen?"));
-        AantalBier = AantalBier + invoer;
-    }
-    if (invoer == "bitterballen")
-    {
-        invoer = parseInt(prompt("Wilt u een schaal van 6 of 18 bitterballen bestellen?"));
-    }
-    if (invoer == "6")
-    {
-        invoer = parseInt(prompt("Hoeveel schaalen van 6 bitterballen wilt u bestellen?"));
-        AantalBitter6 = AantalBitter6 + invoer;
-    }
-    if (invoer == "18")
-    {
-        invoer = parseInt(prompt("Hoeveel schaalen van 18 bitterballen wilt u bestellen?"));
-        AantalBitter18 = AantalBitter18 + invoer;
+function bestellen(){
+    //Invoer
+    while(invoer != "stop"){
+        invoer = prompt("Wat wilt u bestellen?").toLowerCase();
+
+        if (invoer == "fris") {
+            invoer = parseInt(prompt("Hoeveel fris wilt u bestellen?", "0"));
+            AantalFris = AantalFris + invoer;
+
+        }else if (invoer == "wijn") {
+            invoer = parseInt(prompt("Hoeveel wijn wilt u bestellen?", "0"));
+            AantalWijn = AantalWijn + invoer;
+
+        }else if (invoer == "bier") {
+            invoer = parseInt(prompt("Hoeveel bier wilt u bestellen?", "0"));
+            AantalBier = AantalBier + invoer;
+
+        } else if (invoer == "bitterballen"){
+        
+            invoer = parseInt(prompt("Wilt u een schaal van 6 of 18 bitterballen bestellen?", "0"));
+            if (invoer == "6"){
+                invoer = parseInt(prompt("Hoeveel schaalen van 6 bitterballen wilt u bestellen?", "0"));
+                AantalBitter6 = AantalBitter6 + invoer;
+
+            } else if (invoer == "18") {
+                invoer = parseInt(prompt("Hoeveel schaalen van 18 bitterballen wilt u bestellen?", "0"));
+                AantalBitter18 = AantalBitter18 + invoer;
+            }
+
+        } else if (invoer == "stop"){
+            Kassabon();
+
+        } else {
+            alert("U heeft een ongeldige invoer gedaan. Uw bestelling kan niet worden toegevoegd.");
+        }
+        
     }
 }
 
-
-//Totaalbedrag product
-var BetaaldFris = AantalFris * PriceFris;
-var BetaaldWijn = AantalWijn * PriceWijn;
-var BetaaldBier = AantalBier * PriceBier;
-var BetaaldBitter6 = AantalBitter6 * PriceBitter6;
-var BetaaldBitter18 = AantalBitter18 * PriceBitter18;
-
-//Bestelling weergeven
-/*document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
-document.write("<br>" + AantalWijn +  " Wijn: €" + BetaaldWijn);
-document.write("<br>" + AantalBier + " Bier: €" + BetaaldBier);
-document.write("<br>" + AantalBitter6 + " Schaalen van 6 bitterballen: €" + BetaaldBitter6);
-document.write("<br>" + AantalBitter18 + " Schaalen van 18 bitterballen: €" + BetaaldBitter18);*/
-
 //Berekening totaalbedrag
-var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier + BetaaldBitter6 + BetaaldBitter18;
 
-/*document.write('<br> Totaalbedrag: €' + Totaalbedrag);*/
-
-Kassabon();
 
 //Kassabon
 function Kassabon(){
-document.write("<br>Uw rekening:");
-document.write("<br>----------------------------------------------------------------");
-if(AantalFris >=1);
-    document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
+    BetaaldFris = AantalFris * PriceFris;
+    BetaaldWijn = AantalWijn * PriceWijn;
+    BetaaldBier = AantalBier * PriceBier;
+    BetaaldBitter6 = AantalBitter6 * PriceBitter6;
+    BetaaldBitter18 = AantalBitter18 * PriceBitter18;
 
-if(AantalWijn >=1);
-    document.write("<br>" + AantalWijn +  " Wijn: €" + BetaaldWijn);
+    var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier + BetaaldBitter6 + BetaaldBitter18;
 
-if(AantalBier >=1);
-    document.write("<br>" + AantalBier + " Bier: €" + BetaaldBier);
+    document.getElementById("Rekening:").innerHTML =
+    "Uw rekening:";
 
-if(AantalBitter6 >=1);
-    document.write("<br>" + AantalBitter6 + " Schaalen van 6 bitterballen: €" + BetaaldBitter6);
+    document.getElementById("lijn_tekst1").innerHTML =
+    lijn_tekst;
+  
+    if(BetaaldFris != null && BetaaldFris != 0) {
+        document.getElementById("BedragFris").innerHTML =
+        AantalFris + " Fris: €" + BetaaldFris;
+    } else {
+        document.getElementById("BedragFris").innerHTML =
+        "";
+    }
 
-if(AantalBitter18 >=1);
-    document.write("<br>" + AantalBitter18 + " Schaalen van 18 bitterballen: €" + BetaaldBitter18);
+    if(AantalWijn != null && BetaaldWijn != 0) {
+        document.getElementById("BedragWijn").innerHTML =
+        AantalWijn + " Wijn: €" + BetaaldWijn;
+    } else {
+        document.getElementById("BedragWijn").innerHTML =
+        "";
+    }
 
-document.write("<br>----------------------------------------------------------------");
-document.write('<br> Totaalbedrag: €' + Totaalbedrag);
+    if(AantalBier != null && BetaaldBier != 0) {
+        document.getElementById("BedragBier").innerHTML =
+        AantalBier + " Bier: €" + BetaaldBier;
+    }else {
+        document.getElementById("BedragBier").innerHTML =
+        "";
+    }
+
+    if(AantalBitter6 != null && BetaaldBitter6 != 0) {
+        document.getElementById("BedragBitter6").innerHTML =
+        AantalBitter6 + " Schaalen van 6 bitterballen: €" + BetaaldBitter6;
+    } else {
+        document.getElementById("BedragBitter6").innerHTML =
+        "";
+    }
+
+    if(AantalBitter18 != null && BetaaldBitter18 != 0) {
+        document.getElementById("BedragBitter18").innerHTML =
+        AantalBitter18 + " Schaalen van 18 bitterballen: €" + BetaaldBitter18;
+    } else {
+        document.getElementById("BedragBitter18").innerHTML =
+        "";
+    }
+
+    document.getElementById("lijn_tekst2").innerHTML =
+    lijn_tekst;
+
+    document.getElementById("Totaalbedrag").innerHTML =
+    "Totaalbedrag: €" + Totaalbedrag;
+
+
 }
 

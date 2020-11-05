@@ -2,6 +2,7 @@
 <html lang="nl">
 <head>
    <link  href="Horeca.css" rel="stylesheet" type="text/css">
+   <script src="Horeca.js"></script>
 </head>
 <body>
    <div class="topnav">
@@ -9,9 +10,30 @@
       <a href="Drankjes.html">Drankjes</a>
       <a href="Snacks.html">Snacks</a>
   </div>
-<p> U kunt <b>fris, wijn, bier</b> en <b>bitterballen</b> bestellen.</p>
-<p> Typ <b>"stop"</b> als u klaar bent met bestellen.</p>
+   <p> U kunt <b>fris, wijn, bier</b> en <b>bitterballen</b> bestellen.</p>
+   <p> Typ <b>"stop"</b> als u klaar bent met bestellen.</p>
+
+   <p id="Rekening:"></p>
+   <p id="lijn_tekst1"></p>
+
+   <p id="BedragFris"></p>
+   <p id="BedragWijn"></p>
+   <p id="BedragBier"></p>
+   <p id="BedragBitter6"></p>
+   <p id="BedragBitter18"></p>
+
+   <p id="lijn_tekst2"></p>
+   <p id="Totaalbedrag"></p>
    
-  <script src="Horeca.js"></script>
+
+   <p id="KostenFris"></p>
+   <p id="KostenWijn"></p>
+   <p id="KostenBier"></p>
+   <p id="KostenBitter6"></p>
+   <p id="KostenBitter18"></p>
+
+   <button onclick="bestellen()">Klik hier om te bestellen.</button>
+   
+  
  </body>
 </html>
