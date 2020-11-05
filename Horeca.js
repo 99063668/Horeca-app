@@ -50,6 +50,7 @@ while(invoer != "stop"){
     }
 }
 
+
 //Totaalbedrag product
 var BetaaldFris = AantalFris * PriceFris;
 var BetaaldWijn = AantalWijn * PriceWijn;
@@ -58,18 +59,39 @@ var BetaaldBitter6 = AantalBitter6 * PriceBitter6;
 var BetaaldBitter18 = AantalBitter18 * PriceBitter18;
 
 //Bestelling weergeven
-document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
+/*document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
 document.write("<br>" + AantalWijn +  " Wijn: €" + BetaaldWijn);
 document.write("<br>" + AantalBier + " Bier: €" + BetaaldBier);
 document.write("<br>" + AantalBitter6 + " Schaalen van 6 bitterballen: €" + BetaaldBitter6);
-document.write("<br>" + AantalBitter18 + " Schaalen van 18 bitterballen: €" + BetaaldBitter18);
+document.write("<br>" + AantalBitter18 + " Schaalen van 18 bitterballen: €" + BetaaldBitter18);*/
 
 //Berekening totaalbedrag
 var Totaalbedrag = BetaaldFris + BetaaldWijn + BetaaldBier + BetaaldBitter6 + BetaaldBitter18;
 
-document.write('<br> Totaalbedrag: €' + Totaalbedrag);
+/*document.write('<br> Totaalbedrag: €' + Totaalbedrag);*/
+
+Kassabon();
 
 //Kassabon
 function Kassabon(){
+document.write("<br>Uw rekening:");
+document.write("<br>----------------------------------------------------------------");
+if(AantalFris !=0);
+    document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
 
+if(AantalWijn !=0);
+    document.write("<br>" + AantalWijn +  " Wijn: €" + BetaaldWijn);
+
+if(AantalBier !=0);
+    document.write("<br>" + AantalBier + " Bier: €" + BetaaldBier);
+
+if(AantalBitter6 !=0);
+    document.write("<br>" + AantalBitter6 + " Schaalen van 6 bitterballen: €" + BetaaldBitter6);
+
+if(AantalBitter18 !=0);
+    document.write("<br>" + AantalBitter18 + " Schaalen van 18 bitterballen: €" + BetaaldBitter18);
+
+document.write("<br>----------------------------------------------------------------");
+document.write('<br> Totaalbedrag: €' + Totaalbedrag);
 }
+
