@@ -76,19 +76,19 @@ Kassabon();
 function Kassabon(){
 document.write("<br>Uw rekening:");
 document.write("<br>----------------------------------------------------------------");
-if(AantalFris !=0);
+if(AantalFris >=1);
     document.write("<br>" + AantalFris +  " Fris: €" + BetaaldFris);
 
-if(AantalWijn !=0);
+if(AantalWijn >=1);
     document.write("<br>" + AantalWijn +  " Wijn: €" + BetaaldWijn);
 
-if(AantalBier !=0);
+if(AantalBier >=1);
     document.write("<br>" + AantalBier + " Bier: €" + BetaaldBier);
 
-if(AantalBitter6 !=0);
+if(AantalBitter6 >=1);
     document.write("<br>" + AantalBitter6 + " Schaalen van 6 bitterballen: €" + BetaaldBitter6);
 
-if(AantalBitter18 !=0);
+if(AantalBitter18 >=1);
     document.write("<br>" + AantalBitter18 + " Schaalen van 18 bitterballen: €" + BetaaldBitter18);
 
 document.write("<br>----------------------------------------------------------------");
