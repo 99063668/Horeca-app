@@ -127,7 +127,5 @@ function Kassabon(){
 
     document.getElementById("Totaalbedrag").innerHTML =
     "Totaalbedrag: €" + Totaalbedrag;
-
-
 }
 
